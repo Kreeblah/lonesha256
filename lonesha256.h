@@ -26,6 +26,10 @@ lonesha256 function:
 #ifndef LONESHA256_H
 #define LONESHA256_H
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 /* process configuration */
 #ifdef LONESHA256_STATIC
     #define LONESHA256_IMPLEMENTATION
@@ -151,5 +155,9 @@ LSHA256DEF int lonesha256 (unsigned char out[32], const unsigned char* in, size_
 #undef LOAD32H
 #undef STORE64H
 #undef SHA256_COMPRESS
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif /* LONESHA256_IMPLEMENTATION */
